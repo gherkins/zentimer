@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>timer</title>
+    <style>
+
+        body {
+            background-color: #eee;
+        }
+
+        html, body, .timer {
+            height: calc(100% - 20px);
+            padding: 0;
+            margin: 0;
+        }
+
+        .timer {
+            overflow: hidden;
+            margin: 20px auto;
+        }
+
+        .timer .rotate {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .timer .rotate #loader {
+            fill: #egegeg;
+        }
+    </style>
+</head>
+
+<body>
+<div class="timer">
+    <svg class="rotate" viewbox="0 0 250 250">
+        <path id="loader" transform="translate(125, 125)"/>
+    </svg>
+</div>
+<script>
+
+
+    var
+            index = 0
+            , seconds = [5, 8, 7, 3]
+            , resolution = 20
+            , loader = document.getElementById('loader')
+            , α = 0
+            , π = Math.PI
+            , t = (seconds[index] / 360) * 1000;
+
+    cycle();
+
+    function cycle() {
+        var length = seconds[index] * 1000;
+        index++;
+        if (index >= seconds.length) {
+            index = 0;
+        }
+        console.log(length);
+        doTimer(
+                length,
+                resolution,
+                function(steps, count) {
+                    var deg = (360 / steps) * count;
+                    draw(deg);
+                },
+                function() {
+                    console.timeEnd("cycle");
+                    cycle();
+                }
+        )
+    }
+
+
+    function doTimer(length, resolution, oninstance, oncomplete) {
+        var steps = (length / 100) * (resolution / 10),
+                speed = length / steps,
+                count = 0,
+                start = new Date().getTime();
+
+        function instance() {
+            if (count++ == steps) {
+                oncomplete(steps, count);
+            }
+            else {
+                oninstance(steps, count);
+
+                var diff = (new Date().getTime() - start) - (count * speed);
+                window.setTimeout(instance, (speed - diff));
+            }
+        }
+
+        window.setTimeout(instance, speed);
+    }
+
+    function draw(α) {
+        var r = ( α * π / 180 )
+                , x = Math.sin(r) * 125
+                , y = Math.cos(r) * -125
+                , mid = ( α > 180 ) ? 1 : 0
+                , anim = 'M 0 0 v -125 A 125 125 1 '
+                        + mid + ' 1 '
+                        + x + ' '
+                        + y + ' z';
+
+//                [x, y].forEach(function(d) {
+//                    d = Math.round(d * 1e3) / 1e3;
+//                });
+
+        loader.setAttribute('d', anim);
+    }
+
+
+</script>
+</body>
+</html>
