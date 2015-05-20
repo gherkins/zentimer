@@ -1,8 +1,15 @@
 # zentimer
 
-interval timer 
+zen interval timer 
 
-launch: http://web-development.cc/zentimer/
+launch it: http://web-development.cc/zentimer/
+
+This is just a simple interval timer which can be helpful for stretching exercises.   
+No more counting seconds :)
+
+* It simply repeats two cycles:   
+* 30 sec pause, get ready for the next exercise  
+* 60 sec hold the stretch   
 
 
 based on
