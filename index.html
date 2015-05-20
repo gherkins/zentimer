@@ -21,11 +21,33 @@
     var
             intervalIndex = 0
             , colorIndex = 0
-            , seconds = [30, 60]
-            , colors = ["#cccccc", "#0092db"]
+            , seconds = []
+            , secondDefaults = [30, 60]
+            , colors = []
+            , colorDefaults = ["#cccccc", "#0092db"]
             , resolution = 20
             , loader = $("#loader")[0]
             , π = Math.PI;
+
+    var hash = document.location.hash.substr(1);
+
+    hash.split("/").forEach(function(val) {
+
+        if (val.length == 6) {
+            colors.push("#" + val);
+        }
+        else if (false === isNaN(parseInt(val))) {
+            seconds.push(parseInt(val))
+        }
+    });
+
+    if (colors.length == 0) {
+        colors = colorDefaults;
+    }
+
+    if (seconds.length == 0) {
+        seconds = secondDefaults;
+    }
 
     cycle();
 
@@ -40,8 +62,6 @@
         if (colorIndex >= colors.length) {
             colorIndex = 0;
         }
-
-        console.log(color);
 
         $(".timer .rotate #loader").css({fill : color});
 
