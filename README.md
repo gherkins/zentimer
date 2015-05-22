@@ -22,12 +22,12 @@ You can also choose custom colors by appending the hex values:
 
 
 
-based on
+<sup><sub>based on</sup></sub>
 
-"Create A Flat Pie-like Time Clock with Javascript and CSS3"   
-http://www.cssscript.com/create-a-flat-pie-like-time-clock-with-javascript-and-css3/
+<sup><sub>"Create A Flat Pie-like Time Clock with Javascript and CSS3"   </sup></sub>
+<sup><sub>http://www.cssscript.com/create-a-flat-pie-like-time-clock-with-javascript-and-css3/</sup></sub>
 
-and
+<sup><sub>and</sup></sub>
 
-"Creating Accurate Timers in JavaScript"   
-http://www.sitepoint.com/creating-accurate-timers-in-javascript/
+<sup><sub>"Creating Accurate Timers in JavaScript"   </sup></sub>
+<sup><sub>http://www.sitepoint.com/creating-accurate-timers-in-javascript/</sup></sub>
