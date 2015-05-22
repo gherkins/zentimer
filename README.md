@@ -20,14 +20,6 @@ You can also choose custom colors by appending the hex values:
 * http://web-development.cc/zentimer/#10/20/FCFCFC/ACACAC (10sec / 20sec with custom colors)
 
 
+-----------
 
-
-<sup><sub>based on</sup></sub>
-
-<sup><sub>"Create A Flat Pie-like Time Clock with Javascript and CSS3"   </sup></sub>
-<sup><sub>http://www.cssscript.com/create-a-flat-pie-like-time-clock-with-javascript-and-css3/</sup></sub>
-
-<sup><sub>and</sup></sub>
-
-<sup><sub>"Creating Accurate Timers in JavaScript"   </sup></sub>
-<sup><sub>http://www.sitepoint.com/creating-accurate-timers-in-javascript/</sup></sub>
+based on ["Create A Flat Pie-like Time Clock with Javascript and CSS3"](http://www.cssscript.com/create-a-flat-pie-like-time-clock-with-javascript-and-css3/) and ["Creating Accurate Timers in JavaScript"](http://www.sitepoint.com/creating-accurate-timers-in-javascript/)
