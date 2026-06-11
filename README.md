@@ -2,7 +2,7 @@
 
 zen interval timer 
 
-launch it: http://web-development.cc/zentimer/
+launch it: https://datenkatze.de/zentimer/
 
 This is just a simple interval timer which can be helpful for stretching exercises.   
 No more counting seconds :)
@@ -13,11 +13,11 @@ It simply repeats two cycles by default:
 
 
 If you need other time intervals, simply append those to the URL like this:
-* http://web-development.cc/zentimer/#10/20 (10sec / 20sec)
-* http://web-development.cc/zentimer/#30/20/50 (30sec / 20sec / 50sec)
+* https://datenkatze.de/zentimer/#10/20 (10sec / 20sec)
+* https://datenkatze.de/zentimer/#30/20/50 (30sec / 20sec / 50sec)
 
 You can also choose custom colors by appending the hex values:
-* http://web-development.cc/zentimer/#10/20/FCFCFC/ACACAC (10sec / 20sec with custom colors)
+* https://datenkatze.de/zentimer/#10/20/FCFCFC/ACACAC (10sec / 20sec with custom colors)
 
 
 
